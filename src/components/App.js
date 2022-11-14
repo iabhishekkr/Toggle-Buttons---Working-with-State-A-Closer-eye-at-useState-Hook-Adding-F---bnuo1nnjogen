@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
-  const [state1, setState1] = useState("ON")
-  const [state2, setState2] = useState("OFF")
+  const [state1, setState1] = useState("OFF")
+  const [state2, setState2] = useState("ON")
   function handleClick() {
     if (state1 == "ON") {
       setState1("OFF")
