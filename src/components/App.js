@@ -1,19 +1,29 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
-//code here 
-  
+  const [state1, setState1] = useState("ON")
+  const [state2, setState2] = useState("OFF")
+  function handleClick() {
+    if (state1 == "ON") {
+      setState1("OFF")
+      setState2("ON")
+    }
+    else {
+      setState1("ON")
+      setState2("OFF")
+    }
+  }
 
-  
+
   return (
     <div className="App">
       <button id="btn1" onClick={handleClick}>
-      {/* assign value for button 1 */}
+        {state1}
       </button>
       <br />
       <br />
       <button id="btn2" onClick={handleClick}>
-        {/* assign value for button 2 */}
+        {state2}
       </button>
     </div>
   );
